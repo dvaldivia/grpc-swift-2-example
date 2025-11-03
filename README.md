@@ -46,6 +46,9 @@ then run the server like
 
 Open the Xcode project in the `client/` directory, build and run the client target.
 
-```
-⚠️ This part doesn't work, for some reason I cannot get it to work yet.
-```
+
+# Why does this work?
+
+I'm doing a workaround (Issue [#1797](https://github.com/apple/swift-protobuf/issues/1797)) where all the generated protobuf files are on a separate target (a separate framework). This way, both the client and server targets can depend on the same generated code without conflicts.
+
+The grpc-protobuf taget has the MainActor attribute disabled, which avoids issues with async code generation in grpc-swift-2. 

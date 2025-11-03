@@ -1,0 +1,17 @@
+//
+//  grpc_protobufTests.swift
+//  grpc-protobufTests
+//
+//  Created by Daniel Valdivia on 11/1/25.
+//
+
+import Testing
+@testable import grpc_protobuf
+
+struct grpc_protobufTests {
+
+    @Test func example() async throws {
+        // Write your test here and use APIs like `#expect(...)` to check expected conditions.
+    }
+
+}
